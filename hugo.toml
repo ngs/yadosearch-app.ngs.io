@@ -1,0 +1,32 @@
+baseURL = 'https://yadosearch-app.ngs.io/'
+title = '宿さがし'
+
+defaultContentLanguage = 'ja'
+defaultContentLanguageInSubdir = false
+
+[languages]
+[languages.ja]
+contentDir = "content/ja"
+title = "宿さがし"
+languageCode = "ja"
+languageName = "日本語"
+weight = 1
+[languages.en]
+contentDir = "content/en"
+title = "YadoSearch"
+languageCode = "en"
+languageName = "English"
+weight = 2
+
+[params]
+description = '宿さがしは、じゃらん net と楽天トラベルをまとめて検索できる iPhone・iPad・Mac 向けの宿検索アプリです。'
+appStoreURL = 'https://apps.apple.com/jp/app/id347959354'
+supportURL = 'https://github.com/ngs/yadosearch/issues'
+contactEmail = 'corp@littleapps.co.jp'
+
+# タグ・カテゴリは使わないので空のタクソノミーで無効化する
+[taxonomies]
+
+[permalinks]
+[permalinks.page]
+privacy = "/privacy/"
