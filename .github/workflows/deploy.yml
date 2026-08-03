@@ -41,12 +41,15 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+        # No --baseURL: hugo.toml already holds the custom domain. The Pages
+        # base_url is https://ngs.github.io/<repo>/ until the custom domain is
+        # configured, and a build that picked that up wrote /<repo>/ into every
+        # generated link — the language switcher among them.
         run: |
           hugo version
           hugo \
             --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
