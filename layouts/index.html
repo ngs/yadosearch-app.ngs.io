@@ -6,6 +6,11 @@
                 <img src="/img/icon.svg" alt="{{ .Site.Title }}" class="hero-icon" width="180" height="180">
                 <h1>{{ .Params.hero_title }}</h1>
                 <p class="hero-description">{{ .Params.hero_description }}</p>
+                <div class="app-download">
+                    <a href="{{ .Site.Params.appStoreURL }}" target="_blank" rel="noopener noreferrer">
+                        <img src="/img/appstore-banner/{{ .Language.Lang }}.svg" alt="{{ i18n "download_on_the_app_store" }}" class="app-store-badge">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -14,6 +19,12 @@
 <div class="features-section">
     <div class="container">
         {{ .Content }}
+        <div class="app-download-bottom">
+            <p class="download-cta">{{ i18n "download_cta" }}</p>
+            <a href="{{ .Site.Params.appStoreURL }}" target="_blank" rel="noopener noreferrer">
+                <img src="/img/appstore-banner/{{ .Language.Lang }}.svg" alt="{{ i18n "download_on_the_app_store" }}" class="app-store-badge">
+            </a>
+        </div>
     </div>
 </div>
 {{ end }}
